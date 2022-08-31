@@ -8,7 +8,7 @@ RSpec.describe Food, type: :model do
     expect(subject).to be_valid
   end
 
-  it 'shows that a new food is valid' do
+  it 'shows that a new food is not valid' do
     new_food = Food.new(name: 'Apple', user: User.first, price: -1, quantity: 500)
     expect(new_food).to_not be_valid
   end
