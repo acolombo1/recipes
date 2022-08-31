@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
   def index
-    @recipes = Recipe.where(user_id: @current_user)
+    @recipes = Recipe.where(user: @current_user)
   end
 
   def show

@@ -1,5 +1,5 @@
 class FoodsController < ApplicationController
   def index
-    @foods = Food.where(user_id: @current_user)
+    @foods = Food.where(user: @current_user)
   end
 end
