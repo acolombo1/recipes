@@ -53,6 +53,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'letter_opener'
+  gem 'rails-controller-testing'
   gem 'rspec-rails'
 end
 
@@ -71,7 +72,6 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
   gem 'ffi'
-  gem 'rails-controller-testing'
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
