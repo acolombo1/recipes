@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe RecipeFood, type: :model do
-
   subject { RecipeFood.new(quantity: 5, food: Food.first, recipe: Recipe.last) }
 
   it 'shows that a new recipe_food created is valid' do
@@ -12,5 +11,4 @@ RSpec.describe RecipeFood, type: :model do
     new_recipe_food = RecipeFood.new(quantity: 'no', food: Food.first, recipe: Recipe.last)
     expect(new_recipe_food).to_not be_valid
   end
-  
 end
