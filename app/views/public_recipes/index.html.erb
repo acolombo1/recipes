@@ -1,5 +1,6 @@
-<h1 class="hidden">Here is a list of all the public Recipes</h1>
-
+<div class="hidden">Here is a list of all the public Recipes</div>
+<center>
+<h1>Public Recipes</h1>
 <div class="publicrecipes">
 
   <% @recipes.includes([:user]).each do |recipe| %>
@@ -19,3 +20,4 @@
   <% end %>
 
 </div>
+</center>
