@@ -3,7 +3,7 @@ class FoodsController < ApplicationController
     @current_user = current_user
     @foods = Food.where(user: current_user)
   end
-  
+
   def new
     @current_user = current_user
     food = Food.new
@@ -16,7 +16,7 @@ class FoodsController < ApplicationController
 
     if food.save
       flash[:success] = 'Food created successfully'
-      redirect_to "/foods"
+      redirect_to '/foods'
     else
       flash.now[:error] = 'Error: Food could not be saved'
       render :new, locals: { food: }, status: 422
