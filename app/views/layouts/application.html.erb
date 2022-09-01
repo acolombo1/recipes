@@ -11,6 +11,13 @@
   </head>
 
   <body>
+    <div>Logged in as <strong><%= @current_user.name %></strong></div>
+    <% flash.each do |type, msg| %>
+      <div>
+        <%= msg %>
+      </div>
+    <% end %>
+  
     <%= yield %>
   </body>
 </html>
