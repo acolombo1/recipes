@@ -13,3 +13,68 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.hidden {
+  display: none;
+}
+
+ .listitem {
+  padding: 5px 15px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.listitem:nth-child(odd) {
+  background-color: white;
+}
+
+.listitem:nth-child(even) {
+  background-color: rgb(184, 182, 202);
+}
+
+.listitem:nth-child(1) {
+  border-radius: 5px;
+  border: 0;
+  background-color: rgb(148, 146, 163);
+  font-weight: bold;
+}
+
+.listitem:last-child {
+  border-radius: 5px;
+  border: 0;
+}
+
+.food_button_wrapper {
+  text-align: right;
+}
+
+.centered {
+  text-align: center;
+  width: 25%;
+}
+
+.fixedwidth {
+  width: 25%;
+}
+
+.publicrecipes {
+  display: flex;
+  flex-direction: column;
+}
+
+.onerecipe {
+  margin: 20px;
+  padding: 20px;
+  width: 50%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
