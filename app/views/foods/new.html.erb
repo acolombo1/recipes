@@ -7,13 +7,18 @@
     </div>
 
     <div>
+      <%= f.label :quantity %><br>
+      <%= f.number_field :quantity, :size => 10, :required => true %>
+    </div>
+
+    <div>
       <%= f.label :measurement_unit %><br>
       <%= f.text_field :measurement_unit, :size => 10, :required => true %>
     </div>
 
     <div>
       <%= f.label :price %><br>
-      <%= f.number_field :price, step: 0.01, :size => 10 %>
+      <%= f.number_field :price, step: 0.01, :size => 10, :required => true %>
     </div>
 
     <%= f.submit "Add Food" , class: "submit" %>
