@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Blog App
+# Recipes App
 
 > This is a Rails application that builds a recipe database, allowing to share recipes as public, or have
 them private. It calculates quantities of ingredients missing from inventory needed for the recipes and generates a shopping list with prices.
@@ -38,8 +38,6 @@ them private. It calculates quantities of ingredients missing from inventory nee
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](https://github.com/joshuaivie/BookStore/issues).
 
 ## Show your support
 
