@@ -67,4 +67,5 @@ RSpec.configure do |config|
     DatabaseCleaner.clean_with(:truncation)
     Rails.application.load_seed
   end
+  config.include Devise::Test::IntegrationHelpers, type: :feature
 end
