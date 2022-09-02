@@ -3,10 +3,19 @@
 
 <h1><%= @recipe.name %></h1>
 
-<div>
-  <p>preparation_time: <%= @recipe.preparation_time %> secs</p>
-  <p>cooking_time: <%= @recipe.cooking_time %> secs</p>
-  <p>steps: <%= @recipe.description %></p>
+<div class="block">
+  <div>
+    <p>preparation_time: <%= @recipe.preparation_time %> secs</p>
+    <p>cooking_time: <%= @recipe.cooking_time %> secs</p>
+    <p>steps: <%= @recipe.description %></p>
+  </div>
+
+  <div>public:
+    <label class="switch">
+      <input type="checkbox">
+      <span class="slider round"></span>
+    </label>
+  </div>
 </div>
 
 <%=link_to "Generate shopping list"%>

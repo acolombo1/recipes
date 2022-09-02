@@ -11,6 +11,7 @@ class RecipesController < ApplicationController
   end
 
   def destroy
+    @current_user = current_user
     recipe = Recipe.find(params[:recipe_id])
     recipe.destroy
     redirect_to(request.referer)
