@@ -27,5 +27,8 @@ class FoodsController < ApplicationController
     food = Food.find(params[:food_id])
     food.destroy
     redirect_to(request.referer)
+  rescue StandardError
+    flash[:message] = 'Cannot delete, it belongs to a recipe.'
+    redirect_to(request.referer)
   end
 end
