@@ -1,0 +1,26 @@
+<div class="newfood">
+  <h1>New Food</h1>
+  <%= form_with model: food, url: create_food_path, method: :post, local: true, scope: :food do |f| %>
+    <div>
+      <%= f.label :name %><br>
+      <%= f.text_field :name, :size => 60, :required => true %>
+    </div>
+
+    <div>
+      <%= f.label :quantity %><br>
+      <%= f.number_field :quantity, :size => 10, :required => true %>
+    </div>
+
+    <div>
+      <%= f.label :measurement_unit %><br>
+      <%= f.text_field :measurement_unit, :size => 10, :required => true %>
+    </div>
+
+    <div>
+      <%= f.label :price %><br>
+      <%= f.number_field :price, step: 0.01, :size => 10, :required => true %>
+    </div>
+
+    <%= f.submit "Add Food" , class: "submit" %>
+  <% end %>
+</div>

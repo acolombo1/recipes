@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Recipes</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <nav>
+      <header>
+        <div>
+          <% if url_for!="/" %>
+            <%= link_to "Foods", "/foods" %>
+          <% else %>
+            Foods
+          <% end %>
+        </div>
+        <div>
+          <% if url_for!=recipes_path %>
+            <%= link_to "Recipes", "/recipes" %>
+          <% else %>
+            Recipes
+          <% end %>
+        </div>
+        <div>
+          <% if url_for!=public_recipes_path %>
+            <%= link_to "Public Recipes", "/public_recipes" %>
+          <% else %>
+            Public Recipes
+          <% end %>
+        </div>
+        <div>
+          <% if url_for!=shopping_list_path %>
+            <%= link_to "Shopping List", "/shopping_list" %>
+          <% else %>
+            Shopping List
+          <% end %>
+        </div>
+      </header>
+      <div class="subheader">
+        <div>
+          <% if url_for!="/users/sign_in" && url_for!="/users/sign_up" %>
+            <% if user_signed_in? %>
+                Logged in as <strong><%= current_user.name %></strong> |
+              <%= link_to "Logout", destroy_user_session_path, data: { turbo_method: :delete } %>
+            <% else %>
+              <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link' %> |
+              <%= link_to "Login", new_user_session_path, :class => 'navbar-link' %>
+            <% end %>
+          <% end %>
+        </div>
+        <div>
+          <% flash.each do |type, msg| %>
+            <%= msg %>
+          <% end %>
+        </div>
+      </div>
+    </nav>
+    <section>
+      <%= yield %>
+    </section>
+  </body>
+</html>
