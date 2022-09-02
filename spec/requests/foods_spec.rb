@@ -1,5 +1,5 @@
 require 'rails_helper'
-Rails.application.load_seed
+
 RSpec.describe 'Foods', type: :request do
   describe 'GET /index' do
     it 'Foods index: returns http success' do

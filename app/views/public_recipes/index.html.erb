@@ -1,13 +1,13 @@
 <div class="hidden">Here is a list of all the public Recipes</div>
 <center>
-<h1>Public Recipes</h1>
+  <h1>Public Recipes</h1>
+</center>
 <div class="publicrecipes">
-
   <% @recipes.includes([:user]).each do |recipe| %>
     <div class="onerecipe">
       <div>
-        <h2><%= recipe.name %></h2>
-        by <%= recipe.user.name %>
+        <h2><%= link_to recipe.name, "#{ recipes_path }/#{ recipe.id }" %></h2>
+        &nbsp;by <%= recipe.user.name %>
       </div>
       <div>
         Total food items: <%= @food_count[recipe.id] %>
@@ -18,6 +18,4 @@
       </div>
     </div>
   <% end %>
-
 </div>
-</center>

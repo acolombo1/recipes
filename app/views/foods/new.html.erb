@@ -3,12 +3,12 @@
   <%= form_with model: food, url: create_food_path, method: :post, local: true, scope: :food do |f| %>
     <div>
       <%= f.label :name %><br>
-      <%= f.text_field :name, :size => 60 %>
+      <%= f.text_field :name, :size => 60, :required => true %>
     </div>
 
     <div>
       <%= f.label :measurement_unit %><br>
-      <%= f.text_field :measurement_unit, :size => 10 %>
+      <%= f.text_field :measurement_unit, :size => 10, :required => true %>
     </div>
 
     <div>
