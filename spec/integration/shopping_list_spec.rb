@@ -7,7 +7,7 @@ RSpec.describe 'Shopping List page.', type: :feature do
     user.confirm
     visit(shopping_list_path)
   end
-  
+
   it 'Shows title' do
     expect(page).to have_content('Shopping List')
   end

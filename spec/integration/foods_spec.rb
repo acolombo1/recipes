@@ -7,7 +7,7 @@ RSpec.describe 'Main page.', type: :feature do
     user.confirm
     visit(foods_path)
   end
-  
+
   it 'Shows Foods' do
     expect(page).to have_content('Food')
     expect(page).to have_content('Measurement Unit')
