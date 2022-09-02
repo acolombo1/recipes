@@ -137,3 +137,21 @@ ul {
   margin: 20px;
   padding: 5px;
 }
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid blue;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 20px;
+}
+
+.field {
+  margin: 10px;
+}
+
+.actions {
+  margin: 10px;
+}
