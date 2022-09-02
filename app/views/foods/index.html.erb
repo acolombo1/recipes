@@ -5,6 +5,7 @@
   <ul>
     <li class="listitem">
       <span class="fixedwidth">Food</span>
+      <span class="centered">Quantity</span>
       <span class="centered">Measurement Unit</span>
       <span class="centered">Price</span>
       <span class="centered">Action</span>
@@ -12,6 +13,7 @@
     <% @foods.each do |food| %>
       <li class="listitem">
         <span class="fixedwidth"><%= food.name %></span>
+        <span class="centered"><%= food.quantity %></span>
         <span class="centered"><%= food.measurement_unit %></span>
         <span class="centered"><%= food.price %></span>
         <span class="centered"><%= link_to "Delete", "/foods/#{ food.id }", data: { 'turbo-method': :delete, 'turbo-confirm': 'Are you sure?' } %></span>

@@ -12,7 +12,7 @@ class FoodsController < ApplicationController
   end
 
   def create
-    food = Food.new(params.require(:food).permit(:name, :measurement_unit, :price))
+    food = Food.new(params.require(:food).permit(:name, :quantity, :measurement_unit, :price))
     food.user_id = current_user.id
 
     if food.save

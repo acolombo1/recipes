@@ -1,7 +1,7 @@
 class PublicRecipesController < ApplicationController
   def index
     @current_user = current_user
-    @recipes = Recipe.where(public: true)
+    @recipes = Recipe.order(updated_at: :desc).where(public: true)
     @food_count = {}
     @price = {}
     RecipeFood.all.includes(%i[recipe food]).each do |rf|
