@@ -1,8 +1,3 @@
-# rubocop:disable Metrics/PerceivedComplexity
-# rubocop:disable Metrics/CyclomaticComplexity
-# rubocop:disable Metrics/ModuleLength
-# rubocop:disable Metrics/MethodLength
-
 #!/usr/bin/env ruby
 
 #
@@ -120,8 +115,3 @@ end
 m.load_bundler!
 
 load Gem.bin_path('bundler', 'bundle') if m.invoked_as_script?
-
-# rubocop:enable Metrics/PerceivedComplexity
-# rubocop:enable Metrics/CyclomaticComplexity
-# rubocop:enable Metrics/ModuleLength
-# rubocop:enable Metrics/MethodLength
