@@ -10,7 +10,7 @@ first_user = User.create(name: 'Tom')
 second_user = User.create(name: 'Lilly')
 
 apple = Food.create(name: 'Apple', user: first_user, measurement_unit: 'kg', price: 1, quantity: 0.5)
-butter = Food.create(name: 'Butter', user: first_user, measurement_unit: 'kg', price: 5,5, quantity: 0.2)
+butter = Food.create(name: 'Butter', user: first_user, measurement_unit: 'kg', price: 5.5, quantity: 0.2)
 milk = Food.create(name: 'Milk', user: first_user, price: 0.90, measurement_unit: 'lt', quantity: 2)
 flour = Food.create(name: 'Flour', user: first_user, measurement_unit: 'kg', price: 0.5, quantity: 1.5)
 lemon_juice = Food.create(name: 'Lemon juice', user: first_user, measurement_unit: 'lt', price: 1.60, quantity: 0.9)

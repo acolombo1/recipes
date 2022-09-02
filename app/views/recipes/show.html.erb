@@ -8,3 +8,22 @@
   <p>cooking_time: <%= @recipe.cooking_time %> secs</p>
   <p>steps: <%= @recipe.description %></p>
 </div>
+
+<%=link_to "Generate shopping list"%>
+<%=link_to "Add Ingredient"%>
+
+<ul>
+  <li class="listitem">
+    <span class="fixedwidth">Food</span>
+    <span class="centered">Quantity</span>
+    <span class="centered">Value</span>
+    <span class="centered">Actions</span>
+  </li>
+  <% @foods.each do |food| %>
+  <li class="listitem">
+    <span class="fixedwidth"><%= food.name %></span>
+    <span class="centered"><%= food.measurement_unit %></span>
+    <span class="centered"><%= food.price %></span>
+    <span class="centered"><%= link_to "Modify", "/foods/#{ food.id }", data: { 'turbo-method': :update, 'turbo-confirm': 'Are you sure?' } %><%= link_to "Delete", "/foods/#{ food.id }", data: { 'turbo-method': :delete, 'turbo-confirm': 'Are you sure?' } %></span>
+  </li>
+<% end %>
