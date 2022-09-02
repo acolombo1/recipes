@@ -11,13 +11,48 @@
   </head>
 
   <body>
-    <div>Logged in as <strong><%= @current_user.name %></strong></div>
-    <% flash.each do |type, msg| %>
-      <div>
-        <%= msg %>
+    <nav>
+      <header>
+        <div>
+          <% if url_for!="/" %>
+            <%= link_to "Foods", "/foods" %>
+          <% else %>
+            Foods
+          <% end %>
+        </div>
+        <div>
+          <% if url_for!=recipes_path %>
+            <%= link_to "Recipes", "/recipes" %>
+          <% else %>
+            Recipes
+          <% end %>
+        </div>
+        <div>
+          <% if url_for!=public_recipes_path %>
+            <%= link_to "Public Recipes", "/public_recipes" %>
+          <% else %>
+            Public Recipes
+          <% end %>
+        </div>
+        <div>
+          <% if url_for!=shopping_list_path %>
+            <%= link_to "Shopping List", "/shopping_list" %>
+          <% else %>
+            Shopping List
+          <% end %>
+        </div>
+      </header>
+      <div class="subheader">
+        <div>Logged in as <strong><%= @current_user.name %></strong></div>
+        <div>
+          <% flash.each do |type, msg| %>
+            <%= msg %>
+          <% end %>
+        </div>
       </div>
-    <% end %>
-  
-    <%= yield %>
+    </nav>
+    <section>
+      <%= yield %>
+    </section>
   </body>
 </html>
